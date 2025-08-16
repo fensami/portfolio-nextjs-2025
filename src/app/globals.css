@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f5f5f5;
   --foreground: #171717;
 }
 
@@ -22,5 +22,565 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+header {
+  /* margin-top: 24px; */
+}
+.header-wrapper-content {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  /* padding: 10px 10px; */
+  background: #ffffff;
+  box-shadow: 0px 1px 2px rgba(26, 31, 44, 0.25);
+  border-radius: 16px;
+}
+.nav-left-content .nav-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  color: #1a1f2c;
+  font-family: "Bricolage Grotesque";
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.nav-left-content img {
+  width: 32px;
+  height: 32px;
+}
+.nav-right-content .nav-resume {
+  display: none;
+}
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  font-family: "Bricolage Grotesque";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #576076;
+  padding: 8px 12px;
+  transition: all 0.4s ease;
+}
+nav ul li a:hover {
+  background: #f0f2f5;
+  border-radius: 8px;
+}
+nav ul li svg {
+  margin-right: 12px;
+}
+
+.portfolio-global-box {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(26, 31, 44, 0.25);
+  border-radius: 16px;
+  padding: 20px 20px;
+  /* height: 100%; */
+  height: -webkit-fill-available;
+}
+.portfolio-global-box .portfolio-img img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.profile-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  color: #1a1f2c;
+  margin-top: 21px;
+  margin-bottom: 0;
+}
+.profile-para {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #576076;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  text-align: justify;
+}
+
+/*========================
+   Button Global
+  ========================*/
+.portfolio-btn,
+.portfolio-btn-submit {
+  padding: 10px 25px;
+  border-radius: 8px;
+  display: inline-block;
+  color: #1a1f2c;
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid #dbdfe5;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  transition: all 0.6s ease-out 0s;
+}
+.portfolio-btn .btn-icon {
+  color: #4770ff;
+  transition: all 0.4s ease;
+  font-size: 16px;
+}
+.portfolio-btn:hover .btn-icon {
+  color: #fff;
+}
+.portfolio-btn .btn-icon svg {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.portfolio-btn:hover {
+  color: #fff;
+}
+
+.portfolio-btn:after,
+.portfolio-btn:before {
+  transition: all 0.4s ease-out 0s;
+}
+.portfolio-btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #4770ff;
+}
+.portfolio-btn:hover:after {
+  height: 100%;
+}
+.all-btns {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.portfolio-btn-submit {
+  transition: all 0.4s ease;
+}
+.portfolio-btn-submit:hover {
+  background: #4770ff;
+  color: white;
+}
+.portfolio-btn-submit {
+  margin-top: 10px;
+}
+/*========================
+   Social Link
+  ========================*/
+.social-link {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.social-link .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  background: #ffffff;
+  border: 1px solid #dbdfe6;
+  border-radius: 8px;
+  color: #1a1f2c;
+  transition: all 0.4s ease;
+}
+.social-link .social-icon:hover {
+  color: #4770ff;
+}
+/*========================
+   Portfolio Global Title
+  ========================*/
+.portfolio-global-box .portfolio-global-title {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 600;
+  color: #1a1f2c;
+}
+.expert-logo {
+  margin-top: 20px;
+}
+.expert-logo ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.expert-logo ul li .logo-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.expert-logo ul li img {
+  height: 32px;
+  object-fit: cover;
+}
+.expert-logo ul li .logo-box .logo-title {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1f2c;
+  margin-bottom: 0;
+  margin-top: 3px;
+}
+.copyright-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #1a1f2c;
+  margin-top: 50px;
+}
+.copyright-title span {
+  color: #4770ff;
+}
+
+.portfolio-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 0px;
+  flex-wrap: wrap;
+}
+/*========================
+   Recent Post Wrap
+  ========================*/
+.recent-post-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #4770ff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+}
+.recent-post-btn span {
+  line-height: 0;
+  margin-left: 10px;
+}
+.recent-post-btn::before {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #4770ff;
+  content: " ";
+}
+.global-card-wrapper {
+  margin-top: 20px;
+}
+.global-card-wrap .global-img img {
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  overflow: hidden;
+  max-height: 143px;
+  object-fit: cover;
+}
+.global-card-wrap {
+  background: #f0f2f5;
+  padding: 24px 24px 0 24px;
+  border-radius: 8px;
+  margin-bottom: 22px;
+}
+.global-card-wrap:last-child {
+  margin-bottom: 0;
+}
+.all-project-wrapper img {
+  width: 100%;
+}
+.project-card-box {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--secondary-color);
+}
+.project-card-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--secondary-color);
+}
+.all-project-wrapper .project-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-decoration: none;
+  color: var(--secondary-color);
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.all-project-wrapper a {
+  text-decoration: none;
+}
+.all-project-wrapper {
+  margin-top: 50px;
+}
+.projectsdetails-wrapper {
+  margin-top: 40px;
+}
+.projectsdetails-wrapper img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.projects-details-title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 40px;
+}
+.project-detials-btn {
+  display: flex;
+  gap: 10px;
+}
+.project-details-swiper .swiper-button-next:after {
+  content: "\f101";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 20px;
+  background: var(--white-color);
+  min-width: 50px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 1px solid #a4b4d3;
+  right: 10px;
+  position: absolute;
+}
+.project-details-swiper .swiper-button-prev:after {
+  content: "\f100";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 20px;
+  background: var(--white-color);
+  min-width: 50px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  left: 10px;
+  position: absolute;
+  border: 1px solid #a4b4d3;
+}
+/*========================
+   About Page
+  ========================*/
+.about-title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+  color: #1a1f2c;
+  margin-bottom: 0;
+}
+.about-title span {
+  color: var(--primary-color);
+}
+.about-para {
+  margin-top: 14px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  color: #576076;
+}
+.mt-40 {
+  margin-top: 40px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+
+.nav-center-content {
+  display: none;
+}
+
+/*========================
+   Mobile Menu
+  ========================*/
+/* Initial hidden state for the sidebar */
+.mobile-menu {
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-80px);
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  width: 100%;
+  padding: 25px 20px 35px 20px;
+  top: 80px;
+  left: 0;
+  background: white;
+  z-index: 9999;
+}
+.show {
+  top: 80px;
+  position: absolute;
+  left: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  width: 100%;
+  background: white;
+  padding: 25px 20px 35px 20px;
+  z-index: 9999;
+}
+.mobile-menu nav ul {
+  display: flex;
+  flex-direction: column;
+}
+.show nav ul {
+  display: flex;
+  flex-direction: column;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  font-weight: 700;
+  border: 1px solid black;
+  padding: 3px;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+}
+.open-button {
+  border: none;
+  background: transparent;
+  font-weight: 700;
+}
+
+/*========================
+   Global Text
+  ========================*/
+.gb-text {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #576076;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+/*========================
+   Contact Form
+  ========================*/
+.contact-form {
+  margin-top: 48px;
+  background: #f5f7f9;
+  padding: 20px 15px;
+  border-radius: 16px;
+}
+.form-box input {
+  width: 100%;
+  padding: 13px 20px;
+  background: #ffffff;
+  border: 1px solid #576076;
+  border-radius: 8px;
+}
+.form-box textarea {
+  width: 100%;
+  padding: 13px 20px;
+  background: #ffffff;
+  border: 1px solid #576076;
+  border-radius: 8px;
+  resize: none;
+  height: 150px;
+}
+.open-button.active:hover {
+  color: #4770ff;
+}
+.open-button.active {
+  color: #4770ff;
+}
+/*========================
+   Iframe Google Map
+  ========================*/
+iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 16px;
+  margin-top: 24px;
+}
+
+.small-contact-info {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+.small-contact-info .gmail-address {
+  margin-bottom: 0;
+  font-family: "Bricolage Grotesque";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #1a1f2c;
+}
+
+/* Project Details Descrition */
+.project-detials-descritions ul {
+  margin-left: 15px;
+  padding: 0;
+  list-style: upper-alpha;
+}
+.project-detials-descritions ul li {
+  margin-bottom: 10px;
+}
+.project-detials-descritions ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Custom */
+.custom-project-grid {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 20px;
+}
+
+.custom-mt {
+  margin-top: 50px;
+}
+
+.container {
+  max-width: 1320px;
+}
+.custom-logo-img {
+  background: #f0f2f5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+.custom-logo-img img {
+  padding: 14px 0;
+  /* width: 32px;
+  min-height: 32px; */
+}
+.custom-logo-box {
+  text-align: center;
 }
