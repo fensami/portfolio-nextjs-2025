@@ -21,6 +21,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
     cache: "no-store",
   });
   const project = await res.json();
+  console.log(project);
 
   // Check if your API returns { data: {...} } or just the project object
   const p = project.data || project;
@@ -34,7 +35,16 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
         className="w-full h-64 object-cover rounded-xl mt-4"
       />
       <p className="mt-6 text-gray-700">{p.description}</p>
-
+      <div>
+        {project.data.multipleDescriptions &&
+          project.data.multipleDescriptions.length > 0 && (
+            <ul>
+              {project.data.multipleDescriptions.map((desc, index) => (
+                <li key={index}>. {desc}</li>
+              ))}
+            </ul>
+          )}
+      </div>
       <div className="mt-6 flex gap-3">
         <a
           href={p.liveLink}

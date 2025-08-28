@@ -73,6 +73,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const AllProjectPage = async () => {
   const res = await fetch("http://localhost:3001/api/projects", {
@@ -91,11 +92,20 @@ const AllProjectPage = async () => {
             href={`/allProject/${project.id}`} // ✅ navigating with params id
           >
             <div className="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition cursor-pointer">
-              <img
+              <div className="relative w-full h-48">
+                <Image
+                  src={project.bannerImage}
+                  alt={project.name}
+                  fill
+                  objectFit="cover"
+                  // className="w-full h-full  absolute"
+                />
+              </div>
+              {/* <img
                 src={project.bannerImage}
                 alt={project.name}
                 className="w-full h-48 object-cover"
-              />
+              /> */}
               <div className="p-4">
                 <h2 className="text-xl font-semibold">{project.name}</h2>
                 <p className="text-gray-600 text-sm mt-2 line-clamp-3">

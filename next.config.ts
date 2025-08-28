@@ -1,7 +1,28 @@
+// import type { NextConfig } from "next";
+
+// const nextConfig: NextConfig = {
+//   /* config options here */
+// };
+
+// export default nextConfig;
+
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: [
+      "example.com", // Replace with the domain of your image URLs (e.g., "images.unsplash.com")
+      "another-domain.com", // Add more domains as needed
+    ],
+    // Optionally, specify remote patterns for more control
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**", // Wildcard to allow all domains (use cautiously)
+      },
+    ],
+  },
 };
 
 export default nextConfig;
