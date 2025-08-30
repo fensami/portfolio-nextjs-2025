@@ -1,15 +1,3 @@
-// import React from "react";
-
-// const singlePage = () => {
-//   return (
-//     <div>
-//       <h1>Single page</h1>
-//     </div>
-//   );
-// };
-
-// export default singlePage;
-
 import React from "react";
 
 interface ProjectPageProps {
@@ -59,6 +47,13 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
           className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900"
         >
           GitHub
+        </a>
+        <a
+          href={`/admin/dashboard/updateProject/${p.id}`}
+          target="_blank"
+          className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900"
+        >
+          Update
         </a>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import MainProfile from "@/components/MainProfile/MainProfile";
 import MyExpertArea from "@/components/My_Expert_Area/MyExpertArea";
-import Nav from "@/components/Nav/Nav";
 import RecentProjects from "@/components/RecentProjects/RecentProjects";
 
 export default function Home() {

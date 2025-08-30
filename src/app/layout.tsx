@@ -34,10 +34,11 @@
 // }
 
 // app/layout.tsx
+
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav/Nav";
+// import Nav from "@/components/Nav/Nav";
 
 // Import Bricolage Grotesque font
 const bricolage = Bricolage_Grotesque({
@@ -58,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={bricolage.variable}>
       <body className="antialiased pb-5">
-        <Nav />
+        {/* <Nav /> */}
         <main>{children}</main>
       </body>
     </html>

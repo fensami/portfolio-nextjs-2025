@@ -218,32 +218,34 @@ const AddProjects = () => {
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Project Name */}
-            <div className="space-y-2">
-              <Label htmlFor="name">Project Name *</Label>
-              <Input
-                id="name"
-                type="text"
-                placeholder="Enter project name"
-                value={formData.name}
-                onChange={(e) => handleInputChange("name", e.target.value)}
-                required
-              />
-            </div>
+            <div className="md:grid grid-cols-2 gap-4 space-y-6 ">
+              {/* Project Name */}
+              <div className="mb-2 space-y-2">
+                <Label htmlFor="name">Project Name *</Label>
+                <Input
+                  id="name"
+                  type="text"
+                  placeholder="Enter project name"
+                  value={formData.name}
+                  onChange={(e) => handleInputChange("name", e.target.value)}
+                  required
+                />
+              </div>
 
-            {/* Banner Image */}
-            <div className="space-y-2">
-              <Label htmlFor="bannerImage">Banner Image URL *</Label>
-              <Input
-                id="bannerImage"
-                type="url"
-                placeholder="https://example.com/banner.jpg"
-                value={formData.bannerImage}
-                onChange={(e) =>
-                  handleInputChange("bannerImage", e.target.value)
-                }
-                required
-              />
+              {/* Banner Image */}
+              <div className="space-y-2">
+                <Label htmlFor="bannerImage">Banner Image URL *</Label>
+                <Input
+                  id="bannerImage"
+                  type="url"
+                  placeholder="https://example.com/banner.jpg"
+                  value={formData.bannerImage}
+                  onChange={(e) =>
+                    handleInputChange("bannerImage", e.target.value)
+                  }
+                  required
+                />
+              </div>
             </div>
 
             {/* Description */}
@@ -301,30 +303,34 @@ const AddProjects = () => {
               ))}
             </div>
 
-            {/* Live Link */}
-            <div className="space-y-2">
-              <Label htmlFor="liveLink">Live Demo URL</Label>
-              <Input
-                id="liveLink"
-                type="url"
-                placeholder="https://your-project-demo.com"
-                value={formData.liveLink}
-                onChange={(e) => handleInputChange("liveLink", e.target.value)}
-              />
-            </div>
+            <div className="md:grid grid-cols-2 gap-4 space-y-6">
+              {/* Live Link */}
+              <div className="space-y-2">
+                <Label htmlFor="liveLink">Live Demo URL *</Label>
+                <Input
+                  id="liveLink"
+                  type="url"
+                  placeholder="https://your-project-demo.com"
+                  value={formData.liveLink}
+                  onChange={(e) =>
+                    handleInputChange("liveLink", e.target.value)
+                  }
+                />
+              </div>
 
-            {/* GitHub Link */}
-            <div className="space-y-2">
-              <Label htmlFor="githubLink">GitHub Repository URL</Label>
-              <Input
-                id="githubLink"
-                type="url"
-                placeholder="https://github.com/username/repository"
-                value={formData.githubLink}
-                onChange={(e) =>
-                  handleInputChange("githubLink", e.target.value)
-                }
-              />
+              {/* GitHub Link */}
+              <div className="space-y-2">
+                <Label htmlFor="githubLink">GitHub Repository URL *</Label>
+                <Input
+                  id="githubLink"
+                  type="url"
+                  placeholder="https://github.com/username/repository"
+                  value={formData.githubLink}
+                  onChange={(e) =>
+                    handleInputChange("githubLink", e.target.value)
+                  }
+                />
+              </div>
             </div>
 
             {/* Server Link */}
