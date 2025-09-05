@@ -38,6 +38,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import Providers from "@/providers/Providers";
 // import Nav from "@/components/Nav/Nav";
 
 // Import Bricolage Grotesque font
@@ -57,11 +58,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={bricolage.variable}>
-      <body className="antialiased pb-5">
-        {/* <Nav /> */}
-        <main>{children}</main>
-      </body>
-    </html>
+    <Providers>
+      <html lang="en" className={bricolage.variable}>
+        <body className="antialiased pb-5">
+          {/* <Nav /> */}
+          <main>{children}</main>
+        </body>
+      </html>
+    </Providers>
   );
 }

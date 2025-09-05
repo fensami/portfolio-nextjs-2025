@@ -13,7 +13,8 @@ const nextConfig: NextConfig = {
   images: {
     domains: [
       "example.com", // Replace with the domain of your image URLs (e.g., "images.unsplash.com")
-      "another-domain.com", // Add more domains as needed
+      "another-domain.com",
+      "images.remotePatterns" // Add more domains as needed
     ],
     // Optionally, specify remote patterns for more control
     remotePatterns: [

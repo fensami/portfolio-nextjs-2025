@@ -1,8 +1,12 @@
 import MainProfile from "@/components/MainProfile/MainProfile";
 import MyExpertArea from "@/components/My_Expert_Area/MyExpertArea";
 import RecentProjects from "@/components/RecentProjects/RecentProjects";
+// import { getCurrentUser } from "@/services/authService";
+import React from "react";
 
-export default function Home() {
+const HomePage = async () => {
+  // const userData = await getCurrentUser();
+  // console.log(userData);
   return (
     <div>
       {/* <Nav /> */}
@@ -15,4 +19,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default HomePage;

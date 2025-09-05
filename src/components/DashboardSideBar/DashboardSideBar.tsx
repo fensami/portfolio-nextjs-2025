@@ -75,7 +75,7 @@ const projectActions = [
 export function DashboardSidebar() {
   const handleProjectAction = (action: string) => {
     // Handle project actions here
-    console.log(`[v0] Project action: ${action}`);
+    // console.log(`[v0] Project action: ${action}`);
     if (action === "add") {
       // Add project logic
       alert("Add Project clicked");

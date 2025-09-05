@@ -1,15 +1,3 @@
-// export default function DashboardLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <div>
-//       <div>{children}</div>
-//     </div>
-//   );
-// }
-
 "use client";
 
 import type React from "react";
@@ -27,7 +15,6 @@ import {
 } from "@/components/ui/sidebar";
 import { Home, Info, Plus, Minus, Layers, FolderOpenDot } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
 
 const navigationItems = [
   {
@@ -48,7 +35,7 @@ const navigationItems = [
   {
     title: "Add Project",
     icon: Plus,
-    url: "/admin/dashboard/addProject",
+    url: "/admin/addProject",
   },
   {
     title: "Update Project",
@@ -67,13 +54,13 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const handleAction = (action: string) => {
-    if (action === "add") {
-      alert("Add Project clicked");
-    } else if (action === "remove") {
-      alert("Remove Project clicked");
-    }
-  };
+  // const handleAction = (action: string) => {
+  //   if (action === "add") {
+  //     alert("Add Project clicked");
+  //   } else if (action === "remove") {
+  //     alert("Remove Project clicked");
+  //   }
+  // };
 
   return (
     <SidebarProvider defaultOpen={true}>
@@ -94,12 +81,7 @@ export default function DashboardLayout({
             <SidebarMenu>
               {navigationItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton
-                    tooltip={item.title}
-                    onClick={
-                      item.action ? () => handleAction(item.action) : undefined
-                    }
-                  >
+                  <SidebarMenuButton tooltip={item.title}>
                     <item.icon />
                     {/* <Link href={item.url}>{item.title}</Link> */}
                     <a href={item.url}>{item.title}</a>

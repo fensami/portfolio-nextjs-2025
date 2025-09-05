@@ -10,6 +10,7 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import Image from "next/image";
 
 const MainProfile = () => {
   const [copied, setCopied] = useState(false);
@@ -30,8 +31,8 @@ const MainProfile = () => {
     "https://portfolio-update-2024.vercel.app/assets/profile-img-DRGUVHxp.jpg";
   return (
     <div className="portfolio-global-box">
-      <div className="portfolio-img">
-        <img src={ProfileImage} alt="prifile-img" />
+      <div className="relative portfolio-img h-[270px]">
+        <Image src={ProfileImage} alt="profile-img" fill />
       </div>
       <h1 className="profile-title">Asadur Jaman Nur 👋</h1>
       <h4 className="profile-para">
