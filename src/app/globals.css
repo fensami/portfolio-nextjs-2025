@@ -47,9 +47,6 @@ body {
   font-family: "Bricolage Grotesque", sans-serif;
 }
 
-header {
-  /* margin-top: 24px; */
-}
 .header-wrapper-content {
   /* display: flex;
   justify-content: space-between;
@@ -86,12 +83,14 @@ nav ul li a {
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
+  /* color: #576076; */
   color: #576076;
   padding: 8px 12px;
   transition: all 0.4s ease;
 }
 nav ul li a:hover {
   background: #f0f2f5;
+
   border-radius: 8px;
 }
 nav ul li svg {
@@ -289,6 +288,7 @@ nav ul li svg {
   font-size: 16px;
   line-height: 26px;
   color: #4770ff;
+
   display: flex;
   align-items: center;
   text-decoration: none;

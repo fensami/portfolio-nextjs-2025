@@ -1,5 +1,4 @@
 import Signup from "@/components/Modules/Signup/Signup";
-import React from "react";
 
 const signUpPage = () => {
   return (

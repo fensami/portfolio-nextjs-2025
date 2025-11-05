@@ -1,8 +1,8 @@
-import MainProfile from "../MainProfile/MainProfile";
+import MainProfile from "../Pages/HomePage/MainProfile/MainProfile";
 
 const Blog = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-5">
       <div className="about-wrapper mt-40">
         <div className="grid grid-cols-12 gap-5">
           <div className="col-span-12 sm:col-span-4">

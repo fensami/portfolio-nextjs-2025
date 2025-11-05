@@ -1,14 +1,14 @@
-import MainProfile from "../MainProfile/MainProfile";
+import MainProfile from "../Pages/HomePage/MainProfile/MainProfile";
 
 const About = () => {
   return (
-    <div className="container mx-auto custom-mt">
+    <div className="container mx-auto custom-mt px-5">
       <div className="about-wrapper">
         <div className="grid grid-cols-12 gap-5">
-          <div className="col-span-12 sm:col-span-6 md:col-span-4">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <MainProfile></MainProfile>
           </div>
-          <div className="col-span-12 sm:col-span-6 md:col-span-8">
+          <div className="col-span-12 md:col-span-6 lg:col-span-8">
             <div className="about-right-content  portfolio-global-box">
               <h2 className="about-title">
                 Hi I am <span>Asadur Jaman Nur</span> 👋

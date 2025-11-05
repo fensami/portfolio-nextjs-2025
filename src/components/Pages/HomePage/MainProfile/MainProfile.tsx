@@ -31,8 +31,8 @@ const MainProfile = () => {
     "https://portfolio-update-2024.vercel.app/assets/profile-img-DRGUVHxp.jpg";
   return (
     <div className="portfolio-global-box">
-      <div className="relative portfolio-img h-[270px]">
-        <Image src={ProfileImage} alt="profile-img" fill />
+      <div className="relative portfolio-img ">
+        <Image src={ProfileImage} height={270} width={390} alt="profile-img" />
       </div>
       <h1 className="profile-title">Asadur Jaman Nur 👋</h1>
       <h4 className="profile-para">
@@ -44,7 +44,7 @@ const MainProfile = () => {
       {/* <h4 className='profile-para'>A Passionate Front End Developer 🖥️ having 1 years of Experiences.I have experience working at ThemeForest.Now I am working to improve myself.</h4> */}
       <div className="all-btns mt-8">
         <Link
-          href="https://drive.google.com/file/d/1AD_13E_ayPpLe57V0-jgW8FL8bMDulnj/view?usp=sharing"
+          href="https://drive.google.com/file/d/1iNySfx05c3OUzB3aj-3GUMsx1gys6iKd/view?usp=drive_link"
           target="_blank"
           className="portfolio-btn"
         >

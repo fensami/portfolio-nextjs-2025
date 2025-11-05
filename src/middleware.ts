@@ -12,7 +12,7 @@ const authRoutes = ["/login", "signup"]
 /*Role Based Private Routes*/
 const roleBasedPrivateRoutes = {
   USER: [/^\/user/, /^\/kaku/],
-  ADMIN: [/^\/admin/, /^\/kaku/, /^\/addProject/, /^\/updateProject/],
+  ADMIN: [/^\/admin/, /^\/kaku/, /^\/addProject/, /^\/updateProject/, /^\/addSkills/],
 }
 export const middleware = async (request: NextRequest) => {
 
@@ -41,5 +41,5 @@ export const middleware = async (request: NextRequest) => {
 }
 
 export const config = {
-  matcher: ["/login", "/admin", "/admin/:page", "/admin/updateProject", "/admin/addProject", "/admin/updateProject/:id"],
+  matcher: ["/login", "/admin", "/admin/:page", "/admin/updateProject", "/admin/addSkills", "/admin/addProject", "/admin/updateProject/:id"],
 };

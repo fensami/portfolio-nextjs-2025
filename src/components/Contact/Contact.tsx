@@ -5,8 +5,10 @@
 // import emailjs from "@emailjs/browser";
 
 import Link from "next/link";
-import MainProfile from "../MainProfile/MainProfile";
-import MyExpertArea from "../My_Expert_Area/MyExpertArea";
+import MainProfile from "../Pages/HomePage/MainProfile/MainProfile";
+import Skills from "../Pages/HomePage/Skills/Skills";
+// import MainProfile from "../MainProfile/MainProfile";
+// import MyExpertArea from "../My_Expert_Area/MyExpertArea";
 
 const Contact = () => {
   // const form = useRef();
@@ -34,7 +36,7 @@ const Contact = () => {
         <div className="md:col-span-4 col-span-12">
           <MainProfile />
           <div className="mt-20">
-            <MyExpertArea></MyExpertArea>
+            <Skills></Skills>
           </div>
         </div>
         <div className="md:col-span-8 col-span-12">

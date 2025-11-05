@@ -1,12 +1,7 @@
-import UpdateProject from "@/components/admin/UpdateProject/UpdateProject";
-import React from "react";
+// import UpdateProject from "@/components/admin/UpdateProject/UpdateProject";
 
 const updateProjectPage = () => {
-  return (
-    <div>
-      <UpdateProject />
-    </div>
-  );
+  return <div>{/* <UpdateProject /> */}</div>;
 };
 
 export default updateProjectPage;
